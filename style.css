@@ -17,13 +17,11 @@ body {
 }
 
 /* SECTION SPACING */
-
 section {
     padding: 100px 10%;
 }
 
 /* HERO SECTION */
-
 .hero {
     height: 100vh;
     display: flex;
@@ -48,7 +46,6 @@ section {
     width: 100%;
     height: 100%;
     background: inherit;
-    /* optional overlay */
 }
 
 .hero-content {
@@ -62,6 +59,7 @@ section {
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    min-width: fit-content;
 }
 
 .hero p {
@@ -71,7 +69,6 @@ section {
 }
 
 /* BUTTON */
-
 .btn {
     text-decoration: none;
     background: #3b82f6;
@@ -89,7 +86,6 @@ section {
 }
 
 /* HEADINGS */
-
 h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -97,7 +93,6 @@ h2 {
 }
 
 /* ABOUT */
-
 .about p {
     max-width: 800px;
     margin: auto;
@@ -107,7 +102,6 @@ h2 {
 }
 
 /* SKILLS */
-
 .skill-container {
     display: flex;
     justify-content: center;
@@ -130,7 +124,6 @@ h2 {
 }
 
 /* PROJECTS */
-
 .project-card {
     background: #1e293b;
     padding: 30px;
@@ -146,7 +139,6 @@ h2 {
 }
 
 /* CONTACT */
-
 .contact {
     text-align: center;
 }
@@ -158,7 +150,6 @@ h2 {
 }
 
 /* ANIMATION */
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -171,7 +162,6 @@ h2 {
 }
 
 /* RESPONSIVE */
-
 @media(max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -185,7 +175,6 @@ h2 {
 }
 
 /* NAVBAR */
-
 .navbar {
     position: fixed;
     width: 100%;
@@ -206,6 +195,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #3b82f6;
+    display: flex;
     align-items: center;
 }
 .nav-links {
@@ -224,7 +214,6 @@ h2 {
 }
 
 /* SECOND BUTTON */
-
 .secondary-btn {
     background: transparent;
     border: 2px solid #3b82f6;
@@ -235,7 +224,6 @@ h2 {
 }
 
 /* PROJECT LINKS */
-
 .project-card a {
     display: inline-block;
     margin-top: 15px;
@@ -245,7 +233,6 @@ h2 {
 }
 
 /* MOBILE NAVBAR */
-
 @media(max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -257,7 +244,6 @@ h2 {
 }
 
 /* PROJECT GRID */
-
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -266,7 +252,6 @@ h2 {
 }
 
 /* PROJECT IMAGE */
-
 .project-card img {
     width: 100%;
     border-radius: 12px;
@@ -274,7 +259,6 @@ h2 {
 }
 
 /* PROJECT CARD */
-
 .project-card {
     background: #1e293b;
     padding: 25px;
@@ -286,8 +270,74 @@ h2 {
     box-shadow: 0 0 20px rgba(59,130,246,0.4);
 }
 
-/* CHATBOT MESSAGES */
-
+/* CHATBOT MESSAGE STYLES */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#chatbot-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+#chatbot-header {
+    background: #4a6fa5;
+    color: white;
+    padding: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#chatbot-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+#chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#chatbot-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .message {
     max-width: 80%;
     padding: 8px 12px;
@@ -332,7 +382,6 @@ h2 {
 }
 
 /* TYPING CURSOR */
-
 .typing-cursor {
     display: inline-block;
     width: 2px;
@@ -346,7 +395,6 @@ h2 {
 }
 
 /* MATRIX CANVAS */
-
 #matrix {
     position: fixed;
     top: 0;
@@ -355,4 +403,21 @@ h2 {
     height: 100%;
     z-index: -1;
     display: block;
+}
+
+/* CUSTOM CURSOR */
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #0f0;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    z-index: 9999;
+    box-shadow: 0 0 8px rgba(0,255,0,0.7);
+    background: rgba(0,255,0,0.1);
 }
