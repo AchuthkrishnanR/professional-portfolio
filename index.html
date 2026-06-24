@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="assets/chatbot.css">
 </head>
 <body>
+    <!-- Matrix background canvas -->
+    <canvas id="matrix"></canvas>
 
     <!-- NAVBAR -->
-
     <nav class="navbar">
-
         <div class="logo">
         Achuth.dev
         </div>
-
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -25,14 +24,12 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
     </nav>
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
             <h1>Hi, I'm Achuth Krishnan 🚀</h1>
             <p id="typing-text"></p>
-
             <a href="#projects" class="btn">View Projects</a>
             <a href="#" class="btn secondary-btn">
                 Download Resume
@@ -43,7 +40,6 @@
     <!-- ABOUT -->
     <section class="about" id="about">
         <h2>About Me</h2>
-
         <p>
             I am a Computer Science student passionate about
             software development, AI, cloud technologies,
@@ -54,7 +50,6 @@
     <!-- SKILLS -->
     <section class="skills" id="skills">
         <h2>Skills</h2>
-
         <div class="skill-container">
             <div class="skill-card">HTML</div>
             <div class="skill-card">CSS</div>
@@ -66,111 +61,70 @@
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="projects-container">
-
-
-        <!-- PROJECT 5  -->
-
-        <div class="project-card">
-
-            <img src="images/expense.png" alt="Expense Tracker">
-
-            <h3>Expense Tracker</h3>
-
-            <p>
-                A simple expense tracking application built with HTML, CSS, and JavaScript.
-            </p>
-
-            <a href="https://achuthkrishnanr.github.io/expense-tracker/" target="_blank">
-                Live Demo
-            </a>
-
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- PROJECT 5 -->
+            <div class="project-card">
+                <img src="images/expense.png" alt="Expense Tracker">
+                <h3>Expense Tracker</h3>
+                <p>
+                    A simple expense tracking application built with HTML, CSS, and JavaScript.
+                </p>
+                <a href="https://achuthkrishnanr.github.io/expense-tracker/" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+            <!-- PROJECT 4 -->
+            <div class="project-card">
+                <img src="images/task-manager.png" alt="Task Manager">
+                <h3>Task Manager</h3>
+                <p>
+                    A simple task management application built with HTML, CSS, and JavaScript.
+                </p>
+                <a href="https://achuthkrishnanr.github.io/task-manager/" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <img src="images/weather.png" alt="Portfolio">
+                <h3>Weather App</h3>
+                <p>
+                    A simple weather application that displays current weather information.
+                </p>
+                <a href="https://achuthkrishnanr.github.io/weather-app/" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <img src="images/portfolio1.png" alt="Portfolio">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Modern responsive developer portfolio built using HTML, CSS and JavaScript.
+                </p>
+                <a href="https://achuthkrishnanr.github.io/portfolio-website/" target="_blank">
+                    Live Demo
+                </a>
+            </div>
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <img src="images/project1.png" alt="Project Image">
+                <h3>First GitHub Project</h3>
+                <p>
+                    My first deployed website hosted using GitHub Pages.
+                </p>
+                <a href="https://achuthkrishnanr.github.io/first-project/" target="_blank">
+                    Live Demo
+                </a>
+            </div>
         </div>
-
-        <!-- PROJECT 4  -->
-
-        <div class="project-card">
-
-            <img src="images/task-manager.png" alt="Task Manager">
-
-            <h3>Task Manager</h3>
-
-            <p>
-                A simple task management application built with HTML, CSS, and JavaScript.
-            </p>
-
-            <a href="https://achuthkrishnanr.github.io/task-manager/" target="_blank">
-                Live Demo
-            </a>
-
-        </div>
-
-        <!-- PROJECT 3 -->
-
-        <div class="project-card">
-
-            <img src="images/weather.png" alt="Portfolio">
-
-            <h3>Weather App</h3>
-
-            <p>
-                A simple weather application that displays current weather information.
-            </p>
-
-            <a href="https://achuthkrishnanr.github.io/weather-app/" target="_blank">
-                Live Demo
-            </a>
-
-        </div>
-
-        <!-- PROJECT 2 -->
-
-        <div class="project-card">
-
-            <img src="images/portfolio1.png" alt="Portfolio">
-
-            <h3>Portfolio Website</h3>
-
-            <p>
-                Modern responsive developer portfolio built using HTML, CSS and JavaScript.
-            </p>
-
-            <a href="https://achuthkrishnanr.github.io/portfolio-website/" target="_blank">
-                Live Demo
-            </a>
-
-        </div>
-
-        <!-- PROJECT 1 -->
-
-        <div class="project-card">
-
-            <img src="images/project1.png" alt="Project Image">
-
-            <h3>First GitHub Project</h3>
-
-            <p>
-                My first deployed website hosted using GitHub Pages.
-            </p>
-
-            <a href="https://achuthkrishnanr.github.io/first-project/" target="_blank">
-                Live Demo
-            </a>
-
-        </div>
-    </div>
-
-</section>
+    </section>
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <h2>Contact</h2>
-
         <p>Email:achuthkrishnanak@gmail.com</p>
-
         <a href="https://github.com/AchuthkrishnanR" target="_blank">
             GitHub Profile
         </a>
@@ -197,5 +151,99 @@
         </div>
     </div>
 
+    <!-- Matrix background script -->
+    <script>
+        // Matrix background
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()*&^%+-/~{[|`]}';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0'; // green
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters[Math.floor(Math.random() * characters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+    </script>
+
+    <!-- Typing effect for hero subtitle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingText = document.getElementById('typing-text');
+            const textArray = [
+                "Full-Stack Developer",
+                "AI Enthusiast",
+                "Open Source Contributor",
+                "Problem Solver"
+            ];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100; // ms per char
+
+            function type() {
+                const currentText = textArray[textIndex];
+                if (isDeleting) {
+                    typingText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typingText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentText.length) {
+                    // finished typing
+                    isDeleting = true;
+                    setTimeout(type, 2000); // pause before deleting
+                } else if (isDeleting && charIndex === 0) {
+                    // finished deleting
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % textArray.length;
+                    setTimeout(type, 500); // pause before next word
+                } else {
+                    setTimeout(type, isDeleting ? typingSpeed / 2 : typingSpeed);
+                }
+            }
+
+            // start typing
+            type();
+
+            // add blinking cursor after typing text
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            cursor.textContent = '|';
+            typingText.parentNode.insertBefore(cursor, typingText.nextSibling);
+
+            // cursor blink animation via CSS
+        });
+    </script>
 </body>
 </html>
