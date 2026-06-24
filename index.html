@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achuth Krishnan | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/chatbot.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+        Achuth.dev
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Achuth Krishnan 🚀</h1>
+            <p id="typing-text"></p>
+
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#" class="btn secondary-btn">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I am a Computer Science student passionate about
+            software development, AI, cloud technologies,
+            and building impactful projects.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill-container">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Git & GitHub</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+
+        <!-- PROJECT 5  -->
+
+        <div class="project-card">
+
+            <img src="images/expense.png" alt="Expense Tracker">
+
+            <h3>Expense Tracker</h3>
+
+            <p>
+                A simple expense tracking application built with HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/expense-tracker/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 4  -->
+
+        <div class="project-card">
+
+            <img src="images/task-manager.png" alt="Task Manager">
+
+            <h3>Task Manager</h3>
+
+            <p>
+                A simple task management application built with HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/task-manager/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+            <img src="images/weather.png" alt="Portfolio">
+
+            <h3>Weather App</h3>
+
+            <p>
+                A simple weather application that displays current weather information.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/weather-app/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <img src="images/portfolio1.png" alt="Portfolio">
+
+            <h3>Portfolio Website</h3>
+
+            <p>
+                Modern responsive developer portfolio built using HTML, CSS and JavaScript.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/portfolio-website/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <img src="images/project1.png" alt="Project Image">
+
+            <h3>First GitHub Project</h3>
+
+            <p>
+                My first deployed website hosted using GitHub Pages.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/first-project/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+    </div>
+
+</section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+
+        <p>Email:achuthkrishnanak@gmail.com</p>
+
+        <a href="https://github.com/AchuthkrishnanR" target="_blank">
+            GitHub Profile
+        </a>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    <script src="assets/chatbot.js"></script>
+
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbot-toggle" aria-label="Open chatbot">
+        💬
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="chatbot-close" aria-label="Close chatbot">×</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Ask me anything..." />
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+
+</body>
+</html>

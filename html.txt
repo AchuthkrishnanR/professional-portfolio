@@ -1,0 +1,567 @@
+html 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achuth Krishnan | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+        Achuth.dev
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Achuth Krishnan 🚀</h1>
+            <p id="typing-text"></p>
+
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#" class="btn secondary-btn">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I am a Computer Science student passionate about
+            software development, AI, cloud technologies,
+            and building impactful projects.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill-container">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Git & GitHub</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+        
+        <!-- PROJECT 5  -->
+
+        <div class="project-card">
+
+            <img src="images/expense.png" alt="Expense Tracker">
+
+            <h3>Expense Tracker</h3>
+
+            <p>
+                A simple expense tracking application built with HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/expense-tracker/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 4  -->
+
+        <div class="project-card">
+
+            <img src="images/task-manager.png" alt="Task Manager">
+
+            <h3>Task Manager</h3>
+
+            <p>
+                A simple task management application built with HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/task-manager/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+            <img src="images/weather.png" alt="Portfolio">
+
+            <h3>Weather App</h3>
+
+            <p>
+                A simple weather application that displays current weather information.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/weather-app/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+            <img src="images/portfolio1.png" alt="Portfolio">
+
+            <h3>Portfolio Website</h3>
+
+            <p>
+                Modern responsive developer portfolio built using HTML, CSS and JavaScript.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/portfolio-website/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+            <img src="images/project1.png" alt="Project Image">
+
+            <h3>First GitHub Project</h3>
+
+            <p>
+                My first deployed website hosted using GitHub Pages.
+            </p>
+
+            <a href="https://achuthkrishnanr.github.io/first-project/" target="_blank">
+                Live Demo
+            </a>
+
+        </div>
+    </div>
+
+</section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+
+        <p>Email:achuthkrishnanak@gmail.com</p>
+
+        <a href="https://github.com/AchuthkrishnanR" target="_blank">
+            GitHub Profile
+        </a>
+    </section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+jss
+
+const text = [
+    "Aspiring Software Developer",
+    "AI Enthusiast",
+    "CSE Student",
+    "Future Full Stack Developer"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+function type() {
+
+    if(count === text.length) {
+        count = 0;
+    }
+
+    currentText = text[count];
+
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing-text").textContent = letter;
+
+    if(letter.length === currentText.length) {
+
+        count++;
+        index = 0;
+
+        setTimeout(type, 1000);
+
+    } else {
+
+        setTimeout(type, 100);
+    }
+}
+
+type();
+/* SCROLL REVEAL ANIMATION */
+
+ScrollReveal().reveal('.hero-content', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1000
+});
+
+ScrollReveal().reveal('.about', {
+    delay: 200,
+    distance: '50px',
+    origin: 'left',
+    duration: 1000
+});
+
+ScrollReveal().reveal('.skills', {
+    delay: 200,
+    distance: '50px',
+    origin: 'right',
+    duration: 1000
+});
+
+ScrollReveal().reveal('.project-card', {
+    delay: 200,
+    interval: 200,
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1000
+});
+
+ScrollReveal().reveal('.contact', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1000
+});
+
+
+css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* SECTION SPACING */
+
+section {
+    padding: 100px 10%;
+}
+
+/* HERO SECTION */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(15,23,42,0.8),
+        rgba(15,23,42,0.9)),
+        url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+/* BUTTON */
+
+.btn {
+    text-decoration: none;
+    background: #3b82f6;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #3b82f6;
+}
+
+/* HEADINGS */
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* ABOUT */
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+/* SKILLS */
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #1e293b;
+    padding: 20px 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: #334155;
+    box-shadow: 0 0 20px rgba(59,130,246,0.5);
+}
+
+/* PROJECTS */
+
+.project-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(59,130,246,0.4);
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 80px 7%;
+    }
+}
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+
+    background: rgba(15,23,42,0.9);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+.nav-links li {
+    list-style: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3b82f6;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3b82f6;
+}
+
+/* SECOND BUTTON */
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #3b82f6;
+    margin-left: 15px;
+}
+
+.secondary-btn:hover {
+    background: #3b82f6;
+}
+
+/* PROJECT LINKS */
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MOBILE NAVBAR */
+
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+/* PROJECT GRID */
+
+.projects-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+/* PROJECT IMAGE */
+
+.project-card img {
+
+    width: 100%;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+
+    background: #1e293b;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 20px rgba(59,130,246,0.4);
+}
