@@ -44,6 +44,8 @@ section {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero p {
@@ -170,6 +172,7 @@ h2 {
         padding: 80px 7%;
     }
 }
+
 /* NAVBAR */
 
 .navbar {
@@ -253,6 +256,7 @@ h2 {
         gap: 15px;
     }
 }
+
 /* PROJECT GRID */
 
 .projects-container {
@@ -298,3 +302,27 @@ h2 {
     box-shadow:
         0 0 20px rgba(59,130,246,0.4);
 }
+
+/* CHATBOT MESSAGES */
+
+.message {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    word-wrap: break-word;
+    color: #0f172a; /* dark text for light backgrounds */
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #e3f2fd;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #f1f8e9;
+    border-bottom-left-radius: 4px;
+}
+
+/* Chatbot container already defined in index.html style block; ensure no conflict */
