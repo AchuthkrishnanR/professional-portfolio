@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achuth Krishnan | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/chatbot.css">
 </head>
@@ -15,10 +16,10 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">
-        Achuth.dev
+            Achuth<span class="dot">.</span>dev
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home" class="active-link">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -26,9 +27,9 @@
         </ul>
     </nav>
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Hi, I'm Achuth Krishnan 🚀</h1>
+            <h1>Hi, I'm Achuth Krishnan <span class="rocket-pulse">🚀</span></h1>
             <p id="typing-text"></p>
             <a href="#projects" class="btn">View Projects</a>
             <a href="#" class="btn secondary-btn">
@@ -51,11 +52,26 @@
     <section class="skills" id="skills">
         <h2>Skills</h2>
         <div class="skill-container">
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Git & GitHub</div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <span>Git & GitHub</span>
+            </div>
         </div>
     </section>
 
@@ -70,7 +86,7 @@
                 <p>
                     A simple expense tracking application built with HTML, CSS, and JavaScript.
                 </p>
-                <a href="https://achuthkrishnanr.github.io/expense-tracker/" target="_blank">
+                <a href="https://achuthkrishnanr.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer">
                     Live Demo
                 </a>
             </div>
@@ -81,18 +97,18 @@
                 <p>
                     A simple task management application built with HTML, CSS, and JavaScript.
                 </p>
-                <a href="https://achuthkrishnanr.github.io/task-manager/" target="_blank">
+                <a href="https://achuthkrishnanr.github.io/task-manager/" target="_blank" rel="noopener noreferrer">
                     Live Demo
                 </a>
             </div>
             <!-- PROJECT 3 -->
             <div class="project-card">
-                <img src="images/weather.png" alt="Portfolio">
+                <img src="images/weather.png" alt="Weather App">
                 <h3>Weather App</h3>
                 <p>
                     A simple weather application that displays current weather information.
                 </p>
-                <a href="https://achuthkrishnanr.github.io/weather-app/" target="_blank">
+                <a href="https://achuthkrishnanr.github.io/weather-app/" target="_blank" rel="noopener noreferrer">
                     Live Demo
                 </a>
             </div>
@@ -103,7 +119,7 @@
                 <p>
                     Modern responsive developer portfolio built using HTML, CSS and JavaScript.
                 </p>
-                <a href="https://achuthkrishnanr.github.io/portfolio-website/" target="_blank">
+                <a href="https://achuthkrishnanr.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer">
                     Live Demo
                 </a>
             </div>
@@ -114,7 +130,7 @@
                 <p>
                     My first deployed website hosted using GitHub Pages.
                 </p>
-                <a href="https://achuthkrishnanr.github.io/first-project/" target="_blank">
+                <a href="https://achuthkrishnanr.github.io/first-project/" target="_blank" rel="noopener noreferrer">
                     Live Demo
                 </a>
             </div>
@@ -124,12 +140,11 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <h2>Contact</h2>
-        <p>Email:achuthkrishnanak@gmail.com</p>
-        <a href="https://github.com/AchuthkrishnanR" target="_blank">
+        <p>Email: <a href="mailto:achuthkrishnanak@gmail.com">achuthkrishnanak@gmail.com</a></p>
+        <a href="https://github.com/AchuthkrishnanR" target="_blank" rel="noopener noreferrer">
             GitHub Profile
         </a>
     </section>
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
     <script src="assets/chatbot.js"></script>
 
@@ -253,7 +268,7 @@
             cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
         });
         document.addEventListener('mouseup', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)');
         });
     </script>
 </body>

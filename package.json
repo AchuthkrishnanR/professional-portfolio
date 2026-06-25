@@ -9,10 +9,14 @@
     "start": "vercel start"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.22.0"
+    "@anthropic-ai/sdk": "^0.22.0",
+    "framer-motion": "^12.41.0"
   },
-  "devDependencies": {},
-  "keywords": ["portfolio", "ai", "chatbot"],
+  "keywords": [
+    "portfolio",
+    "ai",
+    "chatbot"
+  ],
   "author": "Achuth Krishnan",
   "license": "MIT"
 }
